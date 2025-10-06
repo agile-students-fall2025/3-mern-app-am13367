@@ -35,3 +35,4 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+{/* about us code */}
