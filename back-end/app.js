@@ -8,6 +8,8 @@ const app = express() // instantiate an Express object
 app.use(morgan('dev', { skip: (req, res) => process.env.NODE_ENV === 'test' })) // log all incoming requests, except when in unit test mode.  morgan has a few logging default styles - dev is a nice concise color-coded style
 app.use(cors()) // allow cross-origin resource sharing
 
+app.use('/static', express.static('public'))
+
 // use express's builtin body-parser middleware to parse any data included in a request
 app.use(express.json()) // decode JSON-formatted incoming POST data
 app.use(express.urlencoded({ extended: true })) // decode url-encoded incoming POST data
@@ -90,8 +92,7 @@ app.get('/about', (req, res) => {
       
       "Outside of academics, I love exploring emerging technologies, experimenting with creative coding projects, and learning from diverse perspectives. I believe in continuous self-improvement, teamwork, and using my skills to contribute positively to the world. I am excited about combining my technical knowledge with creativity to develop solutions that matter."
     ],
-    photoUrl:
-      '/am.jpg', // replace with your image URL
+    photoUrl: 'http://localhost:5002/static/am.jpg', // backend-hosted image
   })
 })
 
