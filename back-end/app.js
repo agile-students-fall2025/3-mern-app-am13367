@@ -77,6 +77,24 @@ app.post('/messages/save', async (req, res) => {
     })
   }
 })
+// About Us route
+app.get('/about', (req, res) => {
+  res.json({
+    name: 'Ahmed Arkam Mohamed Faisaar',
+    about: [
+      "Hello! I am currently a Junior at NYU Abu Dhabi, majoring in Computer Science. I have a deep passion for data science, technology, and creative problem-solving. Over the past few years, I have explored various projects that combine coding skills with innovative ideas to solve real-world problems.",
+      
+      "I enjoy building projects that connect technical thinking with human impact. For example, I have worked on projects that analyze data to reveal meaningful insights, create interactive web applications, and explore machine learning applications in everyday life. My goal is to focus on projects that can make a lasting impact on society.",
+      
+      "At the moment, I am studying abroad in New York, taking several courses related to computer science, data science, and AI. I am especially fascinated by machine learning, natural language processing, and predictive modeling. I am actively seeking opportunities to enhance my skills and apply them to challenging real-world problems.",
+      
+      "Outside of academics, I love exploring emerging technologies, experimenting with creative coding projects, and learning from diverse perspectives. I believe in continuous self-improvement, teamwork, and using my skills to contribute positively to the world. I am excited about combining my technical knowledge with creativity to develop solutions that matter."
+    ],
+    photoUrl:
+      '/am.jpg', // replace with your image URL
+  })
+})
+
 
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
