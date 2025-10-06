@@ -23,6 +23,7 @@ const Header = props => {
           </li>
           <li className="nav-item">
             <Link to="/about">About Us</Link>
+          {/* about us link added */}
           </li>
         </ul>
       </nav>
